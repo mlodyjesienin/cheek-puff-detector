@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+#app-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#webcam, #output_canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  transform: scaleX(-1); 
+}
+
+#glow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  box-shadow: inset 0 0 50px 25px rgba(76, 255, 129, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 5; 
+}
+
+#glow-overlay.visible {
+  opacity: 1;
+}
+
+
+#webcamButton {
+  position: absolute;
+  bottom: 40px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#webcamButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#blend-shape-display {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  pointer-events: none; 
+}

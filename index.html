@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+  <title>Mouth Pucker Detector</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div id="app-container">
+    <video id="webcam" autoplay playsinline></video>
+    <canvas class="output_canvas" id="output_canvas"></canvas>
+    <div id="glow-overlay"></div>
+    <div id="blend-shape-display">
+      <p>pucker value: <span id="pucker-value">0.00</span></p>
+      <p>shrug value: <span id="shrug-value">0.00</span></p>
+
+    </div>
+    <button id="webcamButton">ENABLE WEBCAM</button>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
